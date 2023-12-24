@@ -5,6 +5,144 @@ export const useStore = defineStore("store", {
     
     groups: ["Milks & Diaries", "Coffees & Teas", "Pet Foods", "Meats", "Vegetables", "Fruits"],
 
+    productsources: [
+        { id: 1, vendor: "NestMart", sku: "FWM15VKT"},
+        { id: 2, vendor: "GreenGoods", sku: "BPL72XZQ" },
+        { id: 3, vendor: "TechBuddy", sku: "LJN29HYP" },
+        { id: 4, vendor: "GizmoWorld", sku: "RKF48DLM" },
+        { id: 5, vendor: "FashionHub", sku: "PQW63BHN" },
+        { id: 6, vendor: "HomeBliss", sku: "KIO87XMC" },
+        { id: 7, vendor: "SmartStuff", sku: "YTC41GLO" },
+        { id: 8, vendor: "KitchenKing", sku: "WZP52RUV" },
+        { id: 9, vendor: "HealthHaven", sku: "MSX35PLQ" },
+        { id: 10, vendor: "ElectroGear", sku: "VFD94KJA" },
+    ],
+
+    productprices: [
+        { id: 1, origin_price: 42, dis_price: 37 },
+        { id: 2, origin_price: 17, dis_price: 15 },
+        { id: 3, origin_price: 78, dis_price: 71 },
+        { id: 4, origin_price: 55, dis_price: 49 },
+        { id: 5, origin_price: 91, dis_price: 81 },
+        { id: 6, origin_price: 23, dis_price: 18 },
+        { id: 7, origin_price: 65, dis_price: 60 },
+        { id: 8, origin_price: 10, dis_price: 7 },
+        { id: 9, origin_price: 36, dis_price: 30 },
+        { id: 10, origin_price: 82, dis_price: 77 },
+    ],
+
+    ratings: [
+        { id: 1, rating: 4 },
+        { id: 2, rating: 1 },
+        { id: 3, rating: 1 },
+        { id: 4, rating: 2 },
+        { id: 5, rating: 1 },
+        { id: 6, rating: 2 },
+        { id: 7, rating: 3 },
+        { id: 8, rating: 5 },
+        { id: 9, rating: 3 },
+        { id: 10, rating: 1 },
+    ],
+    
+    producttitles: [
+        { id: 1, title: "Seeds of Change Organic Quinoa, Brown, & Red Rice" },
+        { id: 2, title: "All Natural Italian-Style Chicken Meatballs" },
+        { id: 3, title: "Angie's Boomchickapop Sweet & Salty Kettie Corn" },
+        { id: 4, title: "Foster Farm Takeout Crispy Classic Buffalo Wings" },
+        { id: 5, title: "Blue Diamond Almonds Lightly Salted Vegetables" },
+        { id: 6, title: "Chobani Complete Vanilla Greek Yogurt" },
+        { id: 7, title: "Canada Dry Ginger Ale - 2L Botle - 200ml - 400g" },
+        { id: 8, title: "Encore Seafoods Stuffed Alaskan Salmon" },
+        { id: 9, title: "Garton's Beer Battered Fish Fillets with soft paper" },
+        { id: 10, title: "Haagen-Dazs Caramel Cone Ice Cream Ketchup" },
+    ],
+
+    reviewamounts: [
+        { id: 1, review_amount: "1" },
+        { id: 2, review_amount: "2" },
+        { id: 3, review_amount: "3" },
+        { id: 4, review_amount: "4" },
+        { id: 5, review_amount: "5" },
+        { id: 6, review_amount: "6" },
+        { id: 7, review_amount: "7" },
+        { id: 8, review_amount: "8" },
+        { id: 9, review_amount: "9" },
+        { id: 10, review_amount: "10" },
+    ],
+    
+
+    productdisplays: [
+        {
+            id: 1,
+        },
+    ],
+
+    productdescriptions: [
+        {
+            id: 1, description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio consectetur, ducimus officiis libero corrupti ipsa dolore, aspernatur mollitia optio perspiciatis totam veniam cumque expedita tempora quam nihil eveniet! Quasi. </p> <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minus sint consectetur ullam officia doloremque ex odit ipsam omnis unde rem, optio voluptates earum non a, maxime alias consequatur ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt porro, qui magni libero a quasi ea dolorum laborum magnam nihil cum, provident consequuntur corrupti. Nobis dicta in labore maiores.</p>`,
+        },
+        {
+            id: 2, description: `<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus facilis aliquid consequuntur hic incidunt voluptatem dolores laborum sequi molestiae accusamus facere eveniet nemo perferendis, nostrum nobis voluptate placeat fugiat tempora. </p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit vitae eius architecto alias labore enim dignissimos iusto libero voluptatibus at ea sapiente error expedita nisi, neque maiores molestias pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iste quidem quas praesentium! Quos architecto iste minus facere aperiam, quam veniam aspernatur quaerat. Provident quidem odit animi totam necessitatibus sed?</p>`,
+        },
+        {
+            id: 3, description: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis voluptas ratione nisi molestiae ab totam aliquam unde, obcaecati provident et neque ullam assumenda quo modi ea culpa dicta. Consectetur, hic.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius doloremque deserunt ipsum consequatur vel error aut unde odit illum, voluptas, sunt laboriosam dolore culpa. Perspiciatis ipsa consequuntur nihil error repudiandae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate laborum quia saepe fuga aperiam voluptas perspiciatis laboriosam cupiditate deserunt alias, reprehenderit aspernatur, magni, necessitatibus numquam dolores. Voluptatibus quos aspernatur quibusdam!</p>`,
+        },
+        {
+            id: 4, description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem modi vitae sequi nemo molestiae accusantium atque provident repellendus dolorem similique, unde sed laudantium. Harum dignissimos ipsum quos esse magni deleniti.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis optio, vero pariatur fugiat voluptas corrupti nobis veritatis quod accusamus nam, assumenda nostrum, obcaecati fugit iste quis voluptatem tempora voluptates. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro doloribus eius modi? Quam doloribus eius, nam expedita voluptatem iste sapiente, nesciunt, repellat in illo officia amet repellendus provident esse recusandae!</p>`,
+        },
+        {
+            id: 5, description: `<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam deleniti commodi itaque maxime magnam saepe sit. Animi, ea aut sequi libero velit, provident ducimus magni non, sed enim voluptatum voluptatem?</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex necessitatibus repellendus aliquam, quaerat, sunt nam debitis provident error natus beatae facilis ducimus inventore assumenda optio asperiores libero eaque hic cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus aspernatur expedita delectus quibusdam natus placeat nisi pariatur, sit incidunt, tempora consequatur, voluptatibus consectetur eligendi praesentium quas! Vero, ut dignissimos.</p>`,
+        },
+        {
+            id: 6, description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia ipsum repellendus, dignissimos dicta aliquam, ut fugiat minima magni ratione accusamus eaque facilis impedit expedita adipisci saepe earum, tenetur nihil.</p> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis id accusantium, corrupti ipsum magni fuga. Beatae autem, unde minima quae aut voluptates itaque magni? Reiciendis similique officia veniam corporis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, beatae. Voluptatem saepe ratione possimus asperiores quia amet minus eveniet enim laudantium natus, voluptate quod cumque facilis eius aliquam ex minima.</p>`,
+        },
+        {
+            id: 7, description: `<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia excepturi consequuntur, exercitationem eius possimus adipisci nobis optio dicta, tenetur a vitae explicabo sint iusto doloremque ducimus? Facere vel ex eaque!</p> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum nostrum dolorem accusantium repudiandae asperiores inventore aliquam veniam vitae, est, aliquid perspiciatis ullam quibusdam, maxime eveniet. Ea ab ex non magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nemo veritatis ea ab, sint quae esse dolor reiciendis laboriosam tenetur earum atque? Consequatur sed doloribus quod unde suscipit a molestiae?</p>`,
+        },
+        {
+            id: 8, description: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur debitis, ut, quidem nobis, labore cumque quis ad ratione excepturi illum adipisci. Nemo doloremque natus optio dolorum, voluptatem veritatis voluptates aspernatur.</p> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo commodi soluta necessitatibus nostrum dolore ea itaque ipsa quos recusandae, rerum tempore, autem magni quidem ullam, sint veritatis aspernatur unde doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam, velit molestiae tempore iste saepe quaerat beatae inventore eveniet in dolorum, optio fugit reprehenderit fugiat unde nostrum. Fugiat, ducimus ad!</p>`,
+        },
+        {
+            id: 9, description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, commodi consequatur explicabo minus nemo placeat voluptate deleniti nobis repudiandae ipsum voluptas ipsa consequuntur praesentium voluptatum blanditiis tenetur tempore reprehenderit? Ipsa?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptatum nesciunt doloribus, suscipit magni dicta officia perspiciatis. Recusandae sequi amet voluptas illum consequatur dolorum reprehenderit eos. Blanditiis iusto nulla totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia id optio dignissimos odit molestias quae. Sunt, accusantium iusto? Dolores quis impedit minus porro quibusdam modi, odit ex ut assumenda. Non?</p>`,
+        },
+        {
+            id: 10, description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At adipisci, dolores doloremque assumenda ipsam nesciunt reiciendis nisi voluptatem eos dignissimos odit exercitationem facere corrupti recusandae repellat ut culpa tempore voluptas.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laudantium incidunt libero atque quasi expedita ut doloribus, fuga dolores aperiam explicabo repellat assumenda, accusamus molestias. Laborum esse sit molestias quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatibus rem provident atque ducimus. Quaerat laudantium voluptatum quas! Soluta non cupiditate ea temporibus incidunt sequi. Iusto, officia possimus! A, sed.</p>`,
+        },
+    ],
+
+    picturelists: [
+        {
+            id: 1, picture_list: new URL('../assets/images/18 1.png', import.meta.url),
+        },
+        {
+            id: 2, picture_list: new URL('../assets/images/1 902.png', import.meta.url),
+        },
+        {
+            id: 3, picture_list: new URL('../assets/images/3 389454.png', import.meta.url),
+        },
+        {
+            id: 4, picture_list: new URL('../assets/images/5 7.png', import.meta.url),
+        },
+        {
+            id: 5, picture_list: new URL('../assets/images/7 1.png', import.meta.url),
+        },
+        {
+            id: 6, picture_list: new URL('../assets/images/8 1.png', import.meta.url),
+        },
+        {
+            id: 7, picture_list: new URL('../assets/images/9 1.png', import.meta.url),
+        },
+        {
+            id: 8, picture_list: new URL('../assets/images/11 1.png', import.meta.url),
+        },
+        {
+            id: 9, picture_list: new URL('../assets/images/12 1.png', import.meta.url),
+        },
+        {
+            id: 10, picture_list: new URL('../assets/images/16 1.png', import.meta.url),
+        },
+    ],
+
     searchboxes: [
         {
             id: 1,
@@ -20,7 +158,6 @@ export const useStore = defineStore("store", {
             right_icon_size: "20px",
         },
     ],
-
 
     subheaders: [
         {
@@ -194,13 +331,10 @@ export const useStore = defineStore("store", {
 
     menus: [
         {
-            id: 1,
-            title: "Featured Categories",
-            menu_color: "black",
-        },  {
-            id: 2,
-            title: "Popular Products",
-            title_color: "black",
+            id: 1, title: "Featured Categories", menu_color: "black",
+        },  
+        {
+            id: 2,title: "Popular Products", title_color: "black",
         },
     
     ],
@@ -533,5 +667,7 @@ export const useStore = defineStore("store", {
             image: new URL('../assets/images/16 1.png', import.meta.url),
         },
     ],
+
+
   }),
 });

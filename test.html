@@ -1,0 +1,55 @@
+<template>
+  <div class="number-box">
+    <div class="number">{{ number }}</div>
+    <div class="arrows">
+      <div class="arrow" @click="increaseNumber">&#9650;</div>
+      <div class="arrow" @click="decreaseNumber">&#9660;</div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      number: 0,
+    };
+  },
+  methods: {
+    increaseNumber() {
+      this.number++;
+    },
+    decreaseNumber() {
+      if (this.number > 0) {
+        this.number--;
+      }
+    },
+  },
+};
+</script>
+
+<style scoped>
+.number-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.number {
+  font-size: 20px;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 5px 0;
+}
+</style>

@@ -37,10 +37,6 @@ export default {
 </script>
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-
 
 .container{
   width: 100%;

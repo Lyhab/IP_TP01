@@ -16,21 +16,14 @@
 </template>
 
 <script>
-import Buttons from './button.vue'
 
 export default{
     props: ["image_background", "image_frontground", "title_letter", "title_letter_color",  "desc_letter", "desc_letter_color"],
-    components: {
-        Buttons,
-    }
 };
 
 </script>
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
 
 .Subscribe{
     width: 1384px;

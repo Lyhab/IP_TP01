@@ -13,17 +13,17 @@
       <Menu v-for="menu in store.menus.filter(item => item.id === 1)" :key="menu.id" :title="menu.title" :title_color="menu.title_color"/>
 
       <div class="category_container">
-        <Categories v-for="category in store.categories" :title="category.name" :image="category.image" :bg_color="category.color" :amount="category.amount"></Categories>
+        <Categories v-for="category in store.categories" :id="category.id" :title="category.name" :image="category.image" :bg_color="category.color" :amount="category.amount"></Categories>
       </div>
 
       <div class="promotion_container">
-        <Promotions v-for="promotion in store.promotions" :letter="promotion.letter" :image="promotion.image" :bg_color="promotion.bg_color" :button_color="promotion.button_color" :button_bg_color="promotion.button_bg_color" :text="promotion.text"></Promotions>
+        <Promotions v-for="promotion in store.promotions" :id="promotion.id" :letter="promotion.letter" :image="promotion.image" :bg_color="promotion.bg_color" :button_color="promotion.button_color" :button_bg_color="promotion.button_bg_color" :text="promotion.text"></Promotions>
       </div>
 
       <Menu v-for="menu in store.menus.filter(item => item.id === 2)" :key="menu.id" :title="menu.title" :title_color="menu.title_color"/>
 
       <div class="product_container">
-        <ProductCard v-for="product in store.products" :image="product.image" :bg_color="product.bg_color" :inform_bg_color="product.inform_bg_color" :inform_text="product.inform_text" :inform_color="product.inform_color" :company_name="product.company_name" :company_color="product.company_color" :title="product.title" :title_color="product.title_color" :rating="product.rating" :rating_color="product.rating_color" :weight="product.weight" :weight_color="product.weight_color" :discount_price="product.discount_price" :discount_color="product.discount_color" :price_original="product.price_original" :price_color="product.price_color" :add_bg="product.add_bg" :add_letter="product.add_letter" :add_color="product.add_color"></ProductCard>
+        <ProductCard v-for="product in store.products" :id="product.id" :image="product.image" :bg_color="product.bg_color" :inform_bg_color="product.inform_bg_color" :inform_text="product.inform_text" :inform_color="product.inform_color" :company_name="product.company_name" :company_color="product.company_color" :title="product.title" :title_color="product.title_color" :rating="product.rating" :rating_color="product.rating_color" :weight="product.weight" :weight_color="product.weight_color" :discount_price="product.discount_price" :discount_color="product.discount_color" :price_original="product.price_original" :price_color="product.price_color" :add_bg="product.add_bg" :add_letter="product.add_letter" :add_color="product.add_color"></ProductCard>
       </div>
 
     </div>
@@ -103,13 +103,13 @@ export default {
   width: 100%;
   height: 185px;
   display: flex;
-  gap: 25px;
+  justify-content: space-between;
 }
 
 .promotion_container{
   width: 100%;
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
 }
 
 .product_container {

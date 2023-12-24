@@ -1,25 +1,24 @@
 <template>
-     <div :style="{ backgroundColor : bg_color }" class="Categories">
+    <router-link :to="`/categories/${id}`">
+        <div :style="{ backgroundColor : bg_color }" class="Categories">
         <div class="img_container"><img :src='image'/></div>
         <div class="letter_container">
             <div class="title">{{ title }}</div>
             <div class="amount">{{ amount }} items</div>
         </div>
-     </div>
+    </div>
+    </router-link>
 </template>
 
 <script>
 
 export default{
-    props: ["image", "title", "bg_color", "amount"]
+    props: ["image", "title", "bg_color", "amount", "id"]
 };
 
 </script>
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
 
 .Categories{
     width: 136px;

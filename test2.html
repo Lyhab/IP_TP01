@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 2</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <style>
+    .picture-list {
+      display: flex;
+    }
+    .picture {
+      margin: 10px;
+      cursor: pointer;
+    }
+    .displayed-picture {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .rating-stars {
+      display: inline-block;
+    }
+    .star {
+      color: #FFD700; /* Yellow color for stars */
+    }
+    .gray-star {
+      position: relative;
+      color: #A9A9A9; /* Gray color for inactive stars */
+      right: 4px;
+    }
+    .arrow {
+      cursor: pointer;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div>
+    <span class="arrow" @click="moveLeft">&lt;</span>
+    <div class="picture-list">
+      <img v-for="(picture, index) in pictures" :src="picture.url" :alt="picture.title" @click="showPicture(index)" class="picture">
+    </div>
+    <span class="arrow" @click="moveRight">&gt;</span>
+  </div>
+
+
+
+
+
+
+
+  <div v-if="selectedPicture !== null" class="displayed-picture">
+    <img :src="pictures[selectedPicture].url" :alt="pictures[selectedPicture].title">
+    <h2>{{ pictures[selectedPicture].title }}</h2>
+    <div class="rating-stars">
+
+      <span v-for="i in Math.round(pictures[selectedPicture].rating)" class="star">★</span>
+
+      <span v-for="i in 5 - Math.round(pictures[selectedPicture].rating)" class="gray-star">★</span>
+
+      ({{ pictures[selectedPicture].rating.toFixed(1) }})
+    </div>
+
+    <p>First three words: {{ firstThreeWords }}</p>
+    <p>Description: {{ pictures[selectedPicture].description }}</p>
+  </div>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    pictures: [
+      { url: 'src/assets/images/7 1.png', title: 'Title 1', description: 'This is the first description.', rating: 4.0 },
+      { url: 'src/assets/images/5 7.png', title: 'Title 2', description: 'This is the second description.', rating: 3 },
+      { url: 'src/assets/images/11 1.png', title: 'Title 3', description: 'I love you so much', rating: 5.0 },
+    ],
+    selectedPicture: 0 // Set the default selected picture index
+  },
+  computed: {
+    firstThreeWords() {
+      if (this.selectedPicture !== null) {
+        const titleWords = this.pictures[this.selectedPicture].title.split(' ');
+        return titleWords.slice(0, 3).join(' ');
+      }
+      return '';
+    }
+  },
+  methods: {
+    showPicture(index) {
+      this.selectedPicture = index;
+    },
+    moveLeft() {
+      this.selectedPicture = (this.selectedPicture - 1 + this.pictures.length) % this.pictures.length;
+    },
+    moveRight() {
+      this.selectedPicture = (this.selectedPicture + 1) % this.pictures.length;
+    }
+  }
+});
+</script>
+
+</body>
+</html>

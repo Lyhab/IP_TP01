@@ -1,57 +1,62 @@
 <template>
-    <div class="Products" :style="{backgroundColor:bg_color}">
-        <div class="inform_container">
-            <div class="inform" :style="{color:inform_color, backgroundColor:inform_bg_color}">{{ inform_text }}</div>
-        </div>
-
-        <div class="image_container">
-            <img :src='image' class="img"/>
-        </div>
-
-        <div class="company" :style="{color:company_color}">{{ company_name }}</div>
-
-        <div class="title" :style="{color:title_color}">{{ title }}</div>
-
-        <div class="rating_container">
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-
-            <div class="rating" :style="{color:rating_color}">({{ rating }}.0)</div>
-        </div>
-
-        <div class="weight" :style="{color:weight_color}">{{ weight }}</div>
-
-        <div class="bottom_container">
-            <div class="left_container">
-                <div class="discount" :style="{color:discount_color}">
-                    <i class="uil uil-dollar-alt"></i>
-                    <div class="discount_price">{{ discount_price }}</div>
-                </div>
-
-                <div class="price" :style="{color:price_color}">
-                    <i class="uil uil-dollar-alt" style="text-decoration: line-through;"></i>
-                    <div class="price_original">{{ price_original }}</div>
-                </div>
+    <router-link :to="`/products/${id}`">
+        
+        <div class="Products" :style="{backgroundColor:bg_color}">
+            <div class="inform_container">
+                <div class="inform" :style="{color:inform_color, backgroundColor:inform_bg_color}">{{ inform_text }}</div>
             </div>
 
-            <div class="right_container">
-                <div class="add_container" :style="{color:add_color, backgroundColor:add_bg}">
-                    <div class="add_letter">{{ add_letter }}</div>
-                    <i class="uil uil-plus"></i>
+            <div class="image_container">
+                <img :src='image' class="img"/>
+            </div>
+
+            <div class="company" :style="{color:company_color}">{{ company_name }}</div>
+
+            <div class="title" :style="{color:title_color}">{{ title }}</div>
+
+            <div class="rating_container">
+                <i class="uil uil-star"></i>
+                <i class="uil uil-star"></i>
+                <i class="uil uil-star"></i>
+                <i class="uil uil-star"></i>
+                <i class="uil uil-star"></i>
+
+                <div class="rating" :style="{color:rating_color}">({{ rating }}.0)</div>
+            </div>
+
+            <div class="weight" :style="{color:weight_color}">{{ weight }}</div>
+
+            <div class="bottom_container">
+                <div class="left_container">
+                    <div class="discount" :style="{color:discount_color}">
+                        <i class="uil uil-dollar-alt"></i>
+                        <div class="discount_price">{{ discount_price }}</div>
+                    </div>
+
+                    <div class="price" :style="{color:price_color}">
+                        <i class="uil uil-dollar-alt" style="text-decoration: line-through;"></i>
+                        <div class="price_original">{{ price_original }}</div>
+                    </div>
+                </div>
+
+                <div class="right_container">
+                    <div class="add_container" :style="{color:add_color, backgroundColor:add_bg}">
+                        <div class="add_letter">{{ add_letter }}</div>
+                        <i class="uil uil-plus"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </router-link>
 
 </template>
 
 <script>
 
 export default{
-    props: ["bg_color", "image",
+    props: ["id",
+    "bg_color", "image",
     "inform_bg_color", "inform_text", "inform_color", 
     "company_name", "company_color", 
     "title", "title_color",
@@ -67,9 +72,10 @@ export default{
 
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
+
+i{
+    color: gray;
+}
 
 .Products{
     width: 298px;
@@ -223,6 +229,5 @@ export default{
     margin-right: 1vh;
     border-radius: 6px;
 }
-
 
 </style>

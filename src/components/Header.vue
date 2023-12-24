@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="top_left_side">
+        <router-link :to="`/`" class="top_left_side">
           <div class="icon_img_container">
             <img src="../assets/images/icon.svg" alt="" class="icon_img">
           </div>
@@ -8,14 +8,14 @@
             <div class="top_title">Melon</div>
             <div class="top_desc">MART & GROCERY</div>
           </div>
-        </div>
+        </router-link>
 
         <div class="middle_search_box">
           <searchbox v-for="searchbox in store.searchboxes" :title_color="searchbox.title_color" :title_size="searchbox.title_size" :title_text="searchbox.title_text" :left_icon="searchbox.left_icon" :left_icon_color="searchbox.left_icon_color" :left_icon_size="searchbox.left_icon_size"  :placeholder="searchbox.placeholder" :placeholder_color="searchbox.placeholder_color" :right_icon="searchbox.right_icon" :right_icon_color="searchbox.right_icon_color" :right_icon_size="searchbox.right_icon_size"></searchbox>
         </div>
 
         <div class="right_menuitems_container">
-          <menuitem v-for="menuitem in store.menuitems.slice(0, 4)" :key="menuitem.id" :first_icon="menuitem.first_icon" :text="menuitem.text" :second_icon="menuitem.second_icon" :first_icon_color="menuitem.first_icon_color" :text_color="menuitem.text_color" :second_icon_color="menuitem.second_icon_color" :first_icon_size="menuitem.first_icon_size" :text_size="menuitem.first_text_size" :second_icon_size="menuitem.second_icon_size"></menuitem>
+          <menuitem v-for="menuitem in store.menuitems.slice(0, 4)" :key="menuitem.id" :id="menuitem.id" :first_icon="menuitem.first_icon" :text="menuitem.text" :second_icon="menuitem.second_icon" :first_icon_color="menuitem.first_icon_color" :text_color="menuitem.text_color" :second_icon_color="menuitem.second_icon_color" :first_icon_size="menuitem.first_icon_size" :text_size="menuitem.first_text_size" :second_icon_size="menuitem.second_icon_size"></menuitem>
         </div>
     </div>
 </template>
@@ -38,10 +38,6 @@ export default {
 </script>
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-
 
 .container{
   width: 100%;

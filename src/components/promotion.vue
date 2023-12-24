@@ -1,18 +1,21 @@
 <template>
-    <div :style="{ backgroundColor : bg_color }" class="Promotions">
-        <div class="letter_container">
-            <div :style="{color : letter_color }" class="letter">{{ letter }}</div>
-            <Buttons :text="text" :button_color="button_color" :button_bg_color="button_bg_color" class="button"/>
+    <router-link :to="`/products/${id}`">
+        <div :style="{ backgroundColor : bg_color }" class="Promotions">
+            <div class="letter_container">
+                <div :style="{color : letter_color }" class="letter">{{ letter }}</div>
+                <Buttons :text="text" :button_color="button_color" :button_bg_color="button_bg_color" class="button"/>
+            </div>
+            <img :src='image' class="img"/>
         </div>
-        <img :src='image' class="img"/>
-    </div>
+    </router-link>
+    
 </template>
 
 <script>
 import Buttons from './button.vue'
 
 export default{
-    props: ["image", "letter", "letter_color", "bg_color", "button_color", "button_bg_color", "text"],
+    props: ["image", "letter", "letter_color", "bg_color", "button_color", "button_bg_color", "text", "id"],
     components: {
         Buttons,
     }
@@ -21,9 +24,6 @@ export default{
 </script>
 
 <style scoped>
-@import "https://unicons.iconscout.com/release/v4.0.8/css/line.css";
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
 
 .Promotions{
     width: 490px;
